@@ -1,0 +1,29 @@
+{
+  "name": "nearparty-server",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev":     "nodemon --watch src --ext js src/index.js",
+    "start":   "node src/index.js",
+    "migrate": "node database/migrate.js",
+    "seed":    "node database/seed.js"
+  },
+  "dependencies": {
+    "express":          "^4.21.1",
+    "express-validator":"^7.2.0",
+    "cors":             "^2.8.5",
+    "helmet":           "^8.0.0",
+    "morgan":           "^1.10.0",
+    "compression":      "^1.7.4",
+    "express-rate-limit":"^7.4.1",
+    "pg":               "^8.13.1",
+    "bcryptjs":         "^2.4.3",
+    "jsonwebtoken":     "^9.0.2",
+    "socket.io":        "^4.8.0",
+    "dotenv":           "^16.4.5",
+    "uuid":             "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
