@@ -21,6 +21,9 @@ const app    = express()
 const server = createServer(app)
 const PORT   = process.env.PORT || 4000
 
+// Necesario para Render/nginx — identifica IPs reales detrás del proxy
+app.set('trust proxy', 1)
+
 // ── Socket.io ─────────────────────────────────────
 const io = new Server(server, {
   cors: {
